@@ -12,6 +12,7 @@ func main() {
 		fmt.Println("usage: goko <mode> <id>")
 		os.Exit(1)
 	}
+
 	mode := os.Args[1]
 	switch mode {
 	case "set", "s":

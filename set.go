@@ -5,17 +5,27 @@ import (
 	"os"
 	"os/exec"
 	"path/filepath"
+	"runtime"
 )
 
 func set() {
 	//base_dir := getdir()
 	//id := "P97969"
+	host := runtime.GOOS
+	if host != "linux" && host != "darwin" && len(os.Args) < 4 {
+		fmt.Println("Running BSD? Then you need to pass an app name you want to use for opening the .cpp file.")
+		return
+	}
 	if len(os.Args) < 3 {
 		fmt.Println("usage: goko set <id> [app]")
 		os.Exit(1)
 	}
 	id := os.Args[2]
 	appid := "xdg-open"
+	if host == "darwin" {
+		appid = "open"
+	}
+
 	if len(os.Args) >= 4 {
 		appid = os.Args[3]
 	}

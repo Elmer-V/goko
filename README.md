@@ -7,7 +7,7 @@
 
 ## About
 
-A cli tool built to save some time doing repetitive setups and tests of the Jutge problems. Written in idiomatic(not yet. The only idiomatic parts are the ones I've stolen from here and there online) golang because C++ sucks. Works on Linux and probably MacOS(not sure, never tried, but in theory the file paths should be the same, but you would always need to pass an "app to open with" argument because the "xdg-open" fallback doesn't work on MacOS), not on windows. 
+A cli tool built to save some time doing repetitive setups and tests of the Jutge problems. Written in idiomatic(not yet. The only idiomatic parts are the ones I've stolen from here and there online) golang because C++ sucks. Works on Linux and probably MacOS(not sure, never tried, but in theory the file paths should be the same. "xdg-open" is automatically replaced with "open", so opening a file should also work without passing an app argument. Arguments work too as long as the pointed app is in $PATH), not on windows. 
 
 ## Features
 
