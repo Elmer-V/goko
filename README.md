@@ -1,26 +1,26 @@
 # goko
 
-> One-line description of what this project does. (placeholder)
+> Automation cli tool for jutge.org problems of PRO1
 
 ![Go Version](https://img.shields.io/badge/go-1.26-blue)
-![License](https://img.shields.io/badge/license-MIT-green)
+![License](https://img.shields.io/badge/license-BSD--3--Clause-blue)
 
 ## About
 
-Short paragraph describing the project. Replace this with a real summary of
-what `goko` is and why it exists.
+A cli tool built to save some time doing repetitive setups and tests of the Jutge problems. Written in idiomatic(not yet. The only idiomatic parts are the ones I've stolen from here and there online) golang because C++ sucks. Works on Linux and probably MacOS(not sure, never tried, but in theory the file paths should be the same), not on windows. 
 
 ## Features
 
-- Feature one
-- Feature two
-- Feature three
+- Downloads and unpacks input examples and test cases when provided a public problem ID. 
+- Builds the written C++ program using clang(you may change it for p1++ on the source level if needed. p1++ must be a pseudo binary(a file with a shell script in your $PATH), not an alias for it)
+- Runs through the public test cases, so you don't have to send the thing to Jutge over and over again. 
 
 ## Installation
 
 ```bash
 go install github.com/Elmer-V/goko@latest
 ```
+Needs clang(clang++) and diff to be on the machine in runtime to function. Obviously needs go to be installed too for compilation. 
 
 Or build from source:
 
@@ -61,12 +61,8 @@ goko/
 
 ## Contribating
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing`)
-5. Open a Pull Request
+1. While you may try to commit something, I'm going to be too tired and lazy to review/merge, so you'd better clone the thing if you need it.
 
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the BSD 3-Clause License. See `LICENSE` for more information.
