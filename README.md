@@ -7,7 +7,7 @@
 
 ## About
 
-A cli tool built to save some time doing repetitive setups and tests of the Jutge problems. Written in idiomatic(not yet. The only idiomatic parts are the ones I've stolen from here and there online) golang because C++ sucks. Works on Linux and probably MacOS(not sure, never tried, but in theory the file paths should be the same), not on windows. 
+A cli tool built to save some time doing repetitive setups and tests of the Jutge problems. Written in idiomatic(not yet. The only idiomatic parts are the ones I've stolen from here and there online) golang because C++ sucks. Works on Linux and probably MacOS(not sure, never tried, but in theory the file paths should be the same, but you would always need to pass an "app to open with" argument because the "xdg-open" fallback doesn't work on MacOS), not on windows. 
 
 ## Features
 
@@ -38,13 +38,16 @@ goko <mode> <id>
 
 | Mode      | Alias | Description                |
 |-----------|-------|----------------------------|
-| `set`     | `s`   | Description of set mode    |
-| `check`   | `c`   | Description of check mode  |
+| `set`     | `s`   | Needs a problem ID and then can take an app name to open the newly created empty cpp file with    |
+| `check`   | `c`   | Takes a problem ID if run from a directory above the problem or, if run directly from the problem directory, works without any arguments |
 
 ### Example
 
 ```bash
 goko set P42280
+goko s P42280 codium
+goko c P42280
+goko c
 ```
 
 ## Project structure
@@ -56,7 +59,10 @@ goko/
 ├── check.go        # check mode
 ├── downloader.go   # Fetches problem archives
 ├── dirwork.go      # Directory / unzip helpers
-└── go.mod
+├── go.mod
+├── .gitignore
+├── LICENSE
+└── README.md
 ```
 
 ## Contribating

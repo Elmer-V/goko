@@ -11,7 +11,7 @@ func set() {
 	//base_dir := getdir()
 	//id := "P97969"
 	if len(os.Args) < 3 {
-		fmt.Println("usage: ./binary <id>")
+		fmt.Println("usage: goko set <id> [app]")
 		os.Exit(1)
 	}
 	id := os.Args[2]
