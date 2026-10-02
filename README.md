@@ -1,4 +1,4 @@
-# gompare
+# goko
 
 > One-line description of what this project does. (placeholder)
 
@@ -8,7 +8,7 @@
 ## About
 
 Short paragraph describing the project. Replace this with a real summary of
-what `gompare` is and why it exists.
+what `goko` is and why it exists.
 
 ## Features
 
@@ -19,21 +19,21 @@ what `gompare` is and why it exists.
 ## Installation
 
 ```bash
-go install github.com/Elmer-V/gompare@latest
+go install github.com/Elmer-V/goko@latest
 ```
 
 Or build from source:
 
 ```bash
-git clone https://github.com/Elmer-V/gompare.git
-cd gompare
+git clone https://github.com/Elmer-V/goko.git
+cd goko
 go build
 ```
 
 ## Usage
 
 ```bash
-gompare <mode> <id>
+goko <mode> <id>
 ```
 
 | Mode      | Alias | Description                |
@@ -44,13 +44,13 @@ gompare <mode> <id>
 ### Example
 
 ```bash
-gompare set P42280
+goko set P42280
 ```
 
 ## Project structure
 
 ```
-gompare/
+goko/
 ├── main.go         # Entry point
 ├── set.go          # set mode
 ├── check.go        # check mode

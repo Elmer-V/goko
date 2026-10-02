@@ -9,7 +9,7 @@ const baseURL = "https://jutge.org/problems/"
 
 func main() {
 	if len(os.Args) < 2 {
-		fmt.Println("usage: gompare <mode> <id>")
+		fmt.Println("usage: goko <mode> <id>")
 		os.Exit(1)
 	}
 	mode := os.Args[1]
