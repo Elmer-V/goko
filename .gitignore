@@ -1,0 +1,13 @@
+# Build artifacts / compiled binaries
+/gompare
+/goompare
+*.exe
+*.test
+*.out
+
+# Downloaded problem archives
+*.zip
+
+# Extracted problem data downloaded from jutge.org
+P*_en/
+P*_ca/
